@@ -7,7 +7,15 @@ int main()
    printf("Enter the year: ");
    scanf("%d", &year);
 
-   year = (year - 1) - basic_year;
+    if (year > 1900)
+   {
+
+      year = (year - 1) - basic_year;
+   }
+   else 
+   {
+      year = basic_year - (year + 1);
+   }
 
    leap_year = year / 4;
 
